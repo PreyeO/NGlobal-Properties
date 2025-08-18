@@ -78,6 +78,11 @@ export default function ContactForm() {
         rows={6}
         className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#4B0082]"
       />
+      {success && (
+        <p className="text-green-600 font-medium text-center">
+          ✅ Your message has been sent successfully!
+        </p>
+      )}
 
       <div className="text-center">
         <Button

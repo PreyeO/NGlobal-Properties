@@ -24,8 +24,9 @@ export default function PropertyHero() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-lg md:text-xl text-gray-100 max-w-3xl mx-auto"
         >
-          Discover lands, houses, and short-let apartments available for sale or
-          rent. Find your perfect property with ease and confidence.
+          We have verified lands, beautiful homes, and fully serviced shortlets
+          ready for you. Whatever your needs, our goal is to make finding the
+          right property simple and stress-free.
         </motion.p>
 
         <motion.div
@@ -34,7 +35,7 @@ export default function PropertyHero() {
           transition={{ duration: 0.8, delay: 0.4 }}
         >
           <Button className="bg-white text-[#4B0082] px-8 py-4 rounded-2xl shadow-lg hover:scale-105 transition-transform">
-            Browse Properties
+            View Available Properties
           </Button>
         </motion.div>
       </div>

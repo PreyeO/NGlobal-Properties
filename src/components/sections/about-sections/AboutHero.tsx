@@ -16,7 +16,7 @@ export default function AboutHero() {
           transition={{ duration: 0.8 }}
           className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-snug"
         >
-          About North Global Property
+          About NGlobal Properties
         </motion.h1>
 
         {/* Description */}
@@ -26,10 +26,10 @@ export default function AboutHero() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-base md:text-lg lg:text-xl text-gray-100 max-w-2xl mx-auto leading-relaxed"
         >
-          At North Global Property, we strike the perfect balance in global real
-          estate. We guide our clients to discover quality properties, invest
-          with confidence, and thrive in every opportunity while ensuring
-          exceptional service, trust, and long-term value.
+          We are committed to making real estate simple, secure, and accessible.
+          From trusted lands and beautiful homes to serviced shortlets, our goal
+          is to provide properties that bring comfort, peace of mind, and
+          lasting value for every client.
         </motion.p>
 
         {/* CTA */}

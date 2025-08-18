@@ -150,9 +150,9 @@ export const testimonials = [
   {
     id: 1,
     name: "Chinonso E.",
-    role: "Happy Client",
+    role: "First-time Homeowner",
     message:
-      "NGlobal Properties made buying my first home a seamless and enjoyable experience. Highly recommended!",
+      "I never thought buying land in Lagos could be this stress-free. NGlobal Properties guided me every step of the way and delivered exactly what they promised.",
     image: "https://github.com/shadcn.png",
   },
   {
@@ -160,39 +160,39 @@ export const testimonials = [
     name: "Amaka O.",
     role: "Investor",
     message:
-      "Professional, reliable, and attentive to every detail. My investment portfolio has never looked better.",
+      "Their transparency and professionalism gave me confidence to invest. My property value has already increased in just a year.",
     image: "https://github.com/evilrabbit.png",
   },
   {
     id: 3,
     name: "Tunde A.",
-    role: "Homeowner",
+    role: "Luxury Homeowner",
     message:
-      "The team helped me find a luxury villa that exceeded all my expectations. Truly world-class service.",
+      "From inspection to handing over the keys, everything was top-class. They helped me secure a beautiful duplex in Abuja with no hidden charges.",
     image: "https://github.com/leerob.png",
   },
   {
     id: 4,
-    name: "Musa Garba.",
+    name: "Musa G.",
     role: "Happy Client",
     message:
-      "NGlobal Properties made buying my first home a seamless and enjoyable experience. Highly recommended!",
+      "I was worried about land scams, but NGlobal gave me peace of mind. My documents were processed quickly and without stress.",
     image: "https://github.com/shadcn.png",
   },
   {
     id: 5,
-    name: "Ibiso Ibanibo",
-    role: "Investor",
+    name: "Ibiso I.",
+    role: "Real Estate Investor",
     message:
-      "Professional, reliable, and attentive to every detail. My investment portfolio has never looked better.",
+      "Working with NGlobal Properties has been one of my best investment decisions. Their team is reliable and always delivers on time.",
     image: "https://github.com/evilrabbit.png",
   },
   {
     id: 6,
-    name: "Edidiong Abasi.",
-    role: "Homeowner",
+    name: "Edidiong A.",
+    role: "Satisfied Client",
     message:
-      "The team helped me find a luxury villa that exceeded all my expectations. Truly world-class service.",
+      "They helped me furnish and rent out my apartment on Airbnb. The returns have been amazing, and I didn’t have to lift a finger.",
     image: "https://github.com/leerob.png",
   },
 ];
@@ -201,25 +201,25 @@ export const services = [
   {
     title: "Luxury Homes",
     description:
-      "Handpicked modern and classic homes offering comfort, style, and lasting value.",
+      "Beautifully crafted houses that give you comfort, style, and a place to truly call home.",
     icon: "Home",
   },
   {
     title: "Affordable Lands",
     description:
-      "Secure prime land locations with flexible payment options tailored to you.",
+      "Secure prime land locations with flexible payment options tailored to you. ",
     icon: "Map",
   },
   {
     title: "Shortlets & Airbnb",
     description:
-      "Fully managed short-term rentals for hassle-free hosting and guaranteed returns.",
+      "Fully furnished apartments for stress-free short stays, vacations, or business trips.",
     icon: "Key",
   },
   {
     title: "Consultation & Advisory",
     description:
-      "Expert guidance to make confident and profitable real estate decisions.",
+      "Expert guidance to help you choose the right property with confidence.",
     icon: "Users",
   },
 ];

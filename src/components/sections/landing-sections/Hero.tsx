@@ -32,10 +32,9 @@ export default function Hero() {
             <span className="text-[#4B0082]">NGlobal Properties</span>
           </h1>
           <p className="text-base md:text-lg text-gray-600">
-            We help you buy, sell, and invest in properties globally, with
-            expert guidance, personalized solutions, and guaranteed peace of
-            mind. Affordable luxury, stress-free transactions, and lasting
-            value—every step of the way.
+            We make real estate simple and stress-free. From quality homes and
+            verified lands to shortlets and trusted guidance, we have properties
+            that fit your life.
           </p>
 
           {/* CTA Buttons */}
