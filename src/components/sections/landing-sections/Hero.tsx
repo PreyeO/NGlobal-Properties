@@ -6,6 +6,8 @@ import { stats, services } from "@/data";
 import { Link } from "react-router-dom";
 import PurpleButton from "@/components/ui/purple-button";
 import type { JSX } from "react";
+import { Badge } from "@/components/ui/badge";
+import CountUp from "react-countup";
 
 const icons: Record<string, JSX.Element> = {
   Home: <Home className="h-6 w-6 md:h-8 md:w-8 text-[#4B0082]" />,
@@ -16,9 +18,7 @@ const icons: Record<string, JSX.Element> = {
 
 export default function Hero() {
   return (
-    <section className="relative w-full bg-[#F5F5F5] md:pt-35 pt-24 px-6 md:px-12 md:pb-24 pb-12">
-      <div className="absolute inset-0 -z-10 bg-[url('/images/pattern.svg')] opacity-5" />
-
+    <section className="relative w-full bg-[#F5F5F5] md:pt-24 pt-24 px-6 md:px-12 md:pb-24 pb-12">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center text-center md:text-left">
         {/* Left Content */}
         <motion.div
@@ -27,10 +27,26 @@ export default function Hero() {
           transition={{ duration: 0.7 }}
           className="space-y-6"
         >
-          <h1 className="text-3xl md:text-5xl font-extrabold leading-tight text-gray-900">
-            Own, Invest, and Thrive with{" "}
-            <span className="text-[#4B0082]">NGlobal Properties</span>
-          </h1>
+          <div className="relative">
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.3 }}
+              className="absolute -top-5 md:-top-6 left-0"
+            >
+              <Badge
+                variant="secondary"
+                className="bg-[#D6BCFF] text-[#4B0082] text-[12px] font-medium"
+              >
+                Thriving For Excellence
+              </Badge>
+            </motion.div>
+
+            <h1 className="text-3xl md:text-5xl font-extrabold leading-tight text-gray-900">
+              Own, Invest, and Thrive with{" "}
+              <span className="text-[#4B0082]">NGlobal Properties</span>
+            </h1>
+          </div>
           <p className="text-base md:text-lg text-gray-600">
             We make real estate simple and stress-free. From quality homes and
             verified lands to shortlets and trusted guidance, we have properties
@@ -52,27 +68,36 @@ export default function Hero() {
             </Link>
           </div>
 
-          {/* Stats */}
           <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-6">
-            {stats.map((stat, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="text-center"
-              >
-                <p className="md:text-3xl text-2xl font-bold text-[#4B0082]">
-                  {stat.value}
-                </p>
-                <p className="text-sm text-gray-600">{stat.label}</p>
-              </motion.div>
-            ))}
+            {stats.map((stat, i) => {
+              const numericValue = Number(stat.value.replace("+", ""));
+
+              return (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: i * 0.1 }}
+                  className="text-center"
+                >
+                  <p className="md:text-3xl text-2xl font-bold text-[#4B0082]">
+                    <CountUp
+                      end={numericValue}
+                      duration={2}
+                      separator=","
+                      startOnMount={false}
+                      enableScrollSpy
+                    />
+                    +
+                  </p>
+                  <p className="text-sm text-gray-600">{stat.label}</p>
+                </motion.div>
+              );
+            })}
           </div>
         </motion.div>
 
-        {/* Right Content - Service Cards */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
