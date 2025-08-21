@@ -15,10 +15,7 @@ const NavBar: React.FC = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav
-      className="fixed top-4 left-1/2 transform -translate-x-1/2 gap-12 max-w-7xl flex items-center  px-6 py-3 z-50
-                    bg-white/70 backdrop-blur-md shadow-lg rounded-full"
-    >
+    <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 gap-12 max-w-7xl flex items-center  px-6 py-3 z-50 bg-white/70 backdrop-blur-md shadow-lg rounded-full">
       {/* Logo */}
       <Logo />
 
@@ -40,7 +37,7 @@ const NavBar: React.FC = () => {
           </NavLink>
         ))}
         <NavLink to="/contact-us">
-          <Button className="ml-4 rounded-xl px-5 py-2 text-base bg-[#4B0082] text-white hover:bg-[#4B0082]/90 transition">
+          <Button className="cursor-pointer ml-4 rounded-xl px-5 py-2 text-base bg-[#4B0082] text-white hover:bg-[#4B0082]/90 transition">
             Contact
           </Button>
         </NavLink>
@@ -74,7 +71,7 @@ const NavBar: React.FC = () => {
                 </NavLink>
               ))}
               <NavLink to="/contact-us" onClick={() => setOpen(false)}>
-                <Button className="mt-4 w-full rounded-xl px-5 py-3 text-base bg-[#4B0082] text-white hover:bg-[#4B0082]/90 transition">
+                <Button className="cursor-pointer mt-4 w-full rounded-xl px-5 py-3 text-base bg-[#4B0082] text-white hover:bg-[#4B0082]/90 transition">
                   Contact
                 </Button>
               </NavLink>

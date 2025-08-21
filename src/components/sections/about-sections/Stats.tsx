@@ -1,13 +1,6 @@
-// Stats.tsx
 import CTA from "@/components/ui/CTA";
-import { motion } from "framer-motion";
-
-const stats = [
-  { label: "Properties Sold", value: "50+" },
-  { label: "Happy Clients", value: "120+" },
-  { label: "Years Experience", value: "5+" },
-  { label: "Cities Covered", value: "8+" },
-];
+import StatsGrid from "@/components/ui/stats-grid";
+import { stats } from "@/data";
 
 export default function Stats() {
   return (
@@ -21,24 +14,20 @@ export default function Stats() {
         </p>
       </div>
 
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 max-w-7xl mx-auto text-center">
-        {stats.map((stat, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: index * 0.1 }}
-          >
-            <p className="text-4xl md:text-5xl font-bold text-[#4B0082]">
-              {stat.value}
-            </p>
-            <p className="text-gray-700 mt-2">{stat.label}</p>
-          </motion.div>
-        ))}
-      </div>
+      <StatsGrid
+        stats={stats}
+        className="gap-8 max-w-7xl mx-auto"
+        valueClassName="text-4xl md:text-5xl"
+        labelClassName="text-gray-700 mt-2"
+      />
+
       <div className="py-24">
-        <CTA className="bg-[#4B0082] text-[#F5F5F5]" />
+        <CTA
+          bgColor="bg-[#4B0082]"
+          textColor="text-white"
+          subTextColor="text-gray-200"
+          className="hover:bg-white/90  bg-white text-[#4B0082]"
+        />
       </div>
     </section>
   );

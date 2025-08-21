@@ -1,11 +1,12 @@
 // Footer.tsx
 import { Facebook, Twitter, Instagram, Linkedin, Mail } from "lucide-react";
 import Logo from "../ui/logo";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
     <footer className="bg-black text-gray-300 py-16 px-6 md:px-12">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-12">
+      <div className="max-w-7xl flex flex-wrap xl:justify-between gap-12">
         <div className="space-y-4">
           <Logo className="text-white" />
           <p className="text-gray-400 md:text-base text-sm w-[300px]">
@@ -18,24 +19,24 @@ export default function Footer() {
           <h4 className="text-white font-semibold mb-4">Quick Links</h4>
           <ul className="space-y-2">
             <li>
-              <a href="#services" className="hover:text-[#4B0082]">
-                Services
-              </a>
+              <Link to="/about-us" className="hover:text-[#4B0082]">
+                About Us
+              </Link>
             </li>
             <li>
-              <a href="#properties" className="hover:text-[#4B0082]">
+              <Link to="/properties" className="hover:text-[#4B0082]">
                 Properties
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#testimonials" className="hover:text-[#4B0082]">
+              <Link to="#testimonials" className="hover:text-[#4B0082]">
                 Testimonials
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#faq" className="hover:text-[#4B0082]">
+              <Link to="#faq" className="hover:text-[#4B0082]">
                 FAQ
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -61,7 +62,10 @@ export default function Footer() {
             <a href="#" className="hover:text-[#4B0082]">
               <Twitter className="w-5 h-5" />
             </a>
-            <a href="#" className="hover:text-[#4B0082]">
+            <a
+              href="https://www.instagram.com/nglobalproperties?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+              className="hover:text-[#4B0082]"
+            >
               <Instagram className="w-5 h-5" />
             </a>
             <a href="#" className="hover:text-[#4B0082]">

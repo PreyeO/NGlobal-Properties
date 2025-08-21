@@ -1,28 +1,10 @@
 // OurStory.tsx
+import { coreValues } from "@/data";
 import { motion } from "framer-motion";
-
-const coreValues = [
-  {
-    title: "Integrity",
-    description:
-      "We uphold honesty and strong moral principles in every interaction and decision.",
-  },
-  {
-    title: "Excellence",
-    description:
-      "Striving for the highest quality in our services, ensuring client satisfaction and long-term value.",
-  },
-
-  {
-    title: "Customer Focus",
-    description:
-      "Putting our clients at the heart of everything we do, delivering tailored solutions for their needs.",
-  },
-];
 
 export default function OurStory() {
   return (
-    <section className="py-24 px-6 md:px-12 bg-white">
+    <section id="our-story" className="py-24 px-6 md:px-12 bg-white">
       <div className="max-w-7xl mx-auto space-y-20">
         {/* Story Block */}
         <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -37,12 +19,12 @@ export default function OurStory() {
               Our Story
             </h2>
             <p className="text-gray-700 text-lg leading-relaxed">
-              North Global Property is the next-rated real estate company
-              striving to bring a balance to the needs of landed properties
-              globally. We provide quality and affordable properties to those
-              who choose to invest in an affordable yet superior luxury. We buy,
-              sell, and develop properties, empowering individuals and families
-              to achieve financial independence through real estate.
+              NGlobal Property is the next-rated real estate company striving to
+              bring a balance to the needs of landed properties globally. We
+              provide quality and affordable properties to those who choose to
+              invest in an affordable yet superior luxury. We buy, sell, and
+              develop properties, empowering individuals and families to achieve
+              financial independence through real estate.
             </p>
           </motion.div>
 
@@ -53,7 +35,7 @@ export default function OurStory() {
             transition={{ duration: 0.8 }}
           >
             <img
-              src="/images/hero-bg.jpg"
+              src="/images/story.jpg"
               alt="Our Story"
               className="w-full rounded-2xl shadow-lg object-cover"
             />
@@ -69,7 +51,7 @@ export default function OurStory() {
             transition={{ duration: 0.8 }}
           >
             <img
-              src="/images/hero-bg.jpg"
+              src="/images/commitment.jpg"
               alt="Our Commitment"
               className="w-full rounded-2xl shadow-lg object-cover"
             />
@@ -80,7 +62,7 @@ export default function OurStory() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="space-y-8"
+            className="space-y-6"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
               Our Commitment
@@ -107,6 +89,15 @@ export default function OurStory() {
                 To be globally recognized for client satisfaction, innovative
                 solutions, and positive impact on communities, ensuring access
                 to quality housing and land investments.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                Motto
+              </h3>
+              <p className="text-gray-700 text-lg leading-relaxed">
+                Thriving on Excellence
               </p>
             </div>
           </motion.div>
@@ -146,7 +137,7 @@ export default function OurStory() {
             transition={{ duration: 0.8 }}
           >
             <img
-              src="/images/hero-bg.jpg"
+              src="/images/core-values.jpg"
               alt="Our Core Values"
               className="w-full rounded-2xl shadow-lg object-cover"
             />

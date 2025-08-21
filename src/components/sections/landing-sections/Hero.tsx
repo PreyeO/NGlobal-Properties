@@ -6,8 +6,7 @@ import { stats, services } from "@/data";
 import { Link } from "react-router-dom";
 import PurpleButton from "@/components/ui/purple-button";
 import type { JSX } from "react";
-import { Badge } from "@/components/ui/badge";
-import CountUp from "react-countup";
+import StatsGrid from "@/components/ui/stats-grid";
 
 const icons: Record<string, JSX.Element> = {
   Home: <Home className="h-6 w-6 md:h-8 md:w-8 text-[#4B0082]" />,
@@ -28,20 +27,6 @@ export default function Hero() {
           className="space-y-6"
         >
           <div className="relative">
-            <motion.div
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.3 }}
-              className="absolute -top-5 md:-top-6 left-0"
-            >
-              <Badge
-                variant="secondary"
-                className="bg-[#D6BCFF] text-[#4B0082] text-[12px] font-medium"
-              >
-                Thriving For Excellence
-              </Badge>
-            </motion.div>
-
             <h1 className="text-3xl md:text-5xl font-extrabold leading-tight text-gray-900">
               Own, Invest, and Thrive with{" "}
               <span className="text-[#4B0082]">NGlobal Properties</span>
@@ -56,7 +41,10 @@ export default function Hero() {
           {/* CTA Buttons */}
           <div className="flex flex-wrap gap-4 justify-center md:justify-start">
             <Link to="/contact-us">
-              <PurpleButton action="Book a Free Consultation" />
+              <PurpleButton
+                action="Book a Free Consultation"
+                className="hover:bg-[#4B0082]/90  bg-[#4B0082] text-white"
+              />
             </Link>
             <Link to="/our-properties">
               <Button
@@ -68,36 +56,18 @@ export default function Hero() {
             </Link>
           </div>
 
-          <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-6">
-            {stats.map((stat, i) => {
-              const numericValue = Number(stat.value.replace("+", ""));
-
-              return (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: i * 0.1 }}
-                  className="text-center"
-                >
-                  <p className="md:text-3xl text-2xl font-bold text-[#4B0082]">
-                    <CountUp
-                      end={numericValue}
-                      duration={2}
-                      separator=","
-                      startOnMount={false}
-                      enableScrollSpy
-                    />
-                    +
-                  </p>
-                  <p className="text-sm text-gray-600">{stat.label}</p>
-                </motion.div>
-              );
-            })}
+          {/* StatsGrid inserted here */}
+          <div className="mt-10">
+            <StatsGrid
+              stats={stats}
+              className="gap-6"
+              valueClassName="md:text-3xl text-2xl"
+              labelClassName="text-sm text-gray-600"
+            />
           </div>
         </motion.div>
 
+        {/* Right Content - Service Cards */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}

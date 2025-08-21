@@ -12,19 +12,19 @@ export default function Gallery() {
   const [activeTab, setActiveTab] = useState<TabOption>("All");
 
   return (
-    <section className="py-24 px-6 md:px-12 bg-gray-50">
+    <section id="gallery" className="py-24 px-6 md:px-12 bg-gray-50">
       <div className="max-w-7xl mx-auto">
         <Tabs
           value={activeTab}
           onValueChange={(value: string) => setActiveTab(value as TabOption)}
         >
           {/* Tabs List */}
-          <TabsList className="mb-12 justify-center gap-4 bg-white/50 backdrop-blur-md rounded-xl p-1 shadow-md w-fit mx-auto">
+          <TabsList className="mb-12 justify-center md:gap-4 bg-white/50 backdrop-blur-md rounded-xl p-1 shadow-md w-fit mx-auto">
             {tabs.map((tab) => (
               <TabsTrigger
                 key={tab}
                 value={tab}
-                className="px-6 py-2 text-lg font-semibold rounded-lg
+                className="md:px-6 py-2 text-lg font-semibold rounded-lg
                   data-[state=active]:bg-[#4B0082] 
                   data-[state=active]:text-white 
                   hover:bg-[#4B0082]/20 

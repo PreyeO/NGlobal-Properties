@@ -68,10 +68,10 @@ export default function PropertyCard({ property }: PropertyCardProps) {
       <CardContent className="pt-1 pb-8 px-4">
         {/* Title and Price */}
         <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-2 gap-1">
-          <h3 className="text-xl font-bold text-gray-900 group-hover:text-[#4B0082] transition-colors duration-150">
+          <h3 className="md:text-xl text-lg font-bold text-gray-900 group-hover:text-[#4B0082] transition-colors duration-150">
             {property.title}
           </h3>
-          <div className="text-lg font-semibold text-[#4B0082]">
+          <div className="md:text-lg text-base font-semibold text-[#4B0082]">
             {property.price}
           </div>
         </div>

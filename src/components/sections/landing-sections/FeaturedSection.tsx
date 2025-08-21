@@ -21,7 +21,7 @@ export default function FeaturedProperties() {
         ))}
       </div>
       <div className="py-24">
-        <CTA className="bg-[#F5F5F5] text-[#4B0082] " />
+        <CTA className="bg-[#4B0082]  hover:bg-[#4B0082]/90" />
       </div>
     </section>
   );

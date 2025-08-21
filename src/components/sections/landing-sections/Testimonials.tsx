@@ -7,7 +7,10 @@ import CarouselDots from "@/components/ui/carousel-dot";
 
 export default function Testimonials() {
   return (
-    <section className="md:py-24 py-12 px-6 md:px-12 bg-white">
+    <section
+      id="testimonials"
+      className="md:py-24 py-12 px-6 md:px-12 bg-white"
+    >
       <div className="max-w-4xl mx-auto text-center mb-12">
         <h2 className="text-3xl font-bold text-gray-900">
           Client Testimonials

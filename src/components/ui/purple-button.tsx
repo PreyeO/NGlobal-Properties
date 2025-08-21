@@ -1,13 +1,22 @@
 import type React from "react";
 import { Button } from "./button";
 
-interface PurpleButtonProps {
+interface PurpleButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   action: string;
+  className?: string; // make optional
 }
 
-const PurpleButton: React.FC<PurpleButtonProps> = ({ action }) => {
+const PurpleButton: React.FC<PurpleButtonProps> = ({
+  action,
+  className,
+  ...props
+}) => {
   return (
-    <Button className="  hover:bg-[#4B0082]/90 duration-150 cursor-pointer rounded-2xl px-6 py-6 text-lg shadow-md hover:scale-105 transition-transform bg-[#4B0082] text-white">
+    <Button
+      className={`duration-150 cursor-pointer rounded-2xl px-6 py-6 text-lg shadow-md hover:scale-105 transition-transform ${className}`}
+      {...props} // spreads onClick, type, etc.
+    >
       {action}
     </Button>
   );
