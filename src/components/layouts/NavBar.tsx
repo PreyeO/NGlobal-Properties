@@ -20,11 +20,10 @@ const NavBar: React.FC = () => {
         fixed top-4 left-1/2 transform -translate-x-1/2 
         flex items-center justify-between  w-[300px] sm:w-auto px-6 
         z-50
-        rounded-full md:gap-12 md:max-w-7xl bg-white/70 backdrop-blur-md shadow-lg py-2
+        rounded-full md:gap-12 md:max-w-7xl bg-white/70 backdrop-blur-md shadow-lg 
       "
     >
-      {/* Logo */}
-      <Logo />
+      <Logo className="md:h-[70px] md:w-[70px] h-[60px] w-[60px]" />
 
       {/* Desktop Links */}
       <div className="hidden md:flex items-center gap-8">

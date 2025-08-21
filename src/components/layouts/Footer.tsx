@@ -8,7 +8,7 @@ export default function Footer() {
     <footer className="bg-black text-gray-300 py-16 px-6 md:px-12">
       <div className="max-w-7xl flex flex-wrap xl:justify-between gap-12">
         <div className="space-y-4">
-          <Logo className="text-white" />
+          <Logo className="md:h-[80px] md:w-[80px] h-[60px] w-[60px]" />
           <p className="text-gray-400 md:text-base text-sm w-[300px]">
             Connecting you to premium properties globally. Luxury homes,
             investment lands, and expert guidance all in one place.
@@ -46,7 +46,7 @@ export default function Footer() {
           <p className="flex items-center gap-2 text-gray-400">
             <Mail className="w-4 h-4" /> info@nglobalproperties.com
           </p>
-          <p className="text-gray-400 mt-2">+234 123 456 789</p>
+          <p className="text-gray-400 mt-2">+234 808 888 8441</p>
           <p className="text-gray-400 mt-2">Lagos, Nigeria</p>
         </div>
 

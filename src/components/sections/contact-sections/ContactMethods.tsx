@@ -13,8 +13,8 @@ export default function ContactMethods() {
     {
       icon: <MessageCircle className="w-6 h-6 text-white" />,
       label: "WhatsApp",
-      value: "+234 800 123 4567",
-      link: "https://wa.me/2348001234567",
+      value: "+234 808 888 8441",
+      link: "https://wa.me/2348088888441",
       bg: "bg-green-500",
     },
     {

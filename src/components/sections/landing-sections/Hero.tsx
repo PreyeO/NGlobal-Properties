@@ -81,7 +81,7 @@ export default function Hero() {
               transition={{ type: "spring", stiffness: 300 }}
             >
               <Card className="rounded-2xl shadow-lg hover:shadow-xl transition bg-white border border-gray-100">
-                <CardContent className="md:p-4 flex flex-col items-start space-y-3 text-left">
+                <CardContent className="md:p-3 flex flex-col items-start space-y-2 text-left">
                   <div className="md:p-3 p-2 rounded-full bg-[#4B0082]/10">
                     {icons[service.icon]}
                   </div>

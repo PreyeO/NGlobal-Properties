@@ -6,6 +6,7 @@ import Footer from "./components/layouts/Footer";
 import AboutUsPage from "./pages/AboutUsPage";
 import PropertiesPage from "./pages/PropertiesPage";
 import ContactPage from "./pages/ContactPage";
+import LogoWatermark from "./components/ui/LogoWatermark";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/contact-us" element={<ContactPage />} />
       </Routes>
       <Footer />
+      <LogoWatermark />
     </BrowserRouter>
   );
 }
