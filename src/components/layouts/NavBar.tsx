@@ -15,7 +15,14 @@ const NavBar: React.FC = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 gap-12 max-w-7xl flex items-center  px-6 py-2 md:py-3 z-50 bg-white/70 backdrop-blur-md shadow-lg rounded-full">
+    <nav
+      className="
+        fixed top-4 left-1/2 transform -translate-x-1/2 
+        flex items-center justify-between  w-full sm:w-auto px-6 
+        z-50
+        md:rounded-full md:gap-12 md:max-w-7xl md:bg-white/70 md:backdrop-blur-md md:shadow-lg md:py-2
+      "
+    >
       {/* Logo */}
       <Logo />
 
@@ -43,7 +50,7 @@ const NavBar: React.FC = () => {
         </NavLink>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu Button */}
       <div className="md:hidden">
         <Sheet open={open} onOpenChange={setOpen}>
           <SheetTrigger asChild>
@@ -77,7 +84,7 @@ const NavBar: React.FC = () => {
               </NavLink>
             </div>
 
-            <SheetClose asChild className="">
+            <SheetClose asChild>
               <Button className="absolute top-4 right-4 p-1 bg-[#4B0082]">
                 <X className="w-6 h-6" />
               </Button>

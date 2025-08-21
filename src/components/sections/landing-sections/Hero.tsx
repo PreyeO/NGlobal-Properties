@@ -18,7 +18,7 @@ const icons: Record<string, JSX.Element> = {
 export default function Hero() {
   return (
     <section className="relative w-full bg-[#F5F5F5] md:pt-24 pt-24 px-6 md:px-12 md:pb-24 pb-12">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center text-center md:text-left">
+      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center text-center md:text-left">
         {/* Left Content */}
         <motion.div
           initial={{ opacity: 0, x: -30 }}
@@ -39,7 +39,7 @@ export default function Hero() {
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-wrap gap-4 justify-center md:justify-start">
+          <div className="flex flex-wrap gap-4 justify-center md:justify-start w-full">
             <Link to="/contact-us">
               <PurpleButton
                 action="Book a Free Consultation"
