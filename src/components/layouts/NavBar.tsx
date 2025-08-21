@@ -18,9 +18,9 @@ const NavBar: React.FC = () => {
     <nav
       className="
         fixed top-4 left-1/2 transform -translate-x-1/2 
-        flex items-center justify-between  w-[300px] sm:w-auto px-6 
+        flex items-center justify-between w-full  max-w-[80%] md:w-auto md:max-w-7xl px-4 md:px-6  
         z-50
-        rounded-full md:gap-12 md:max-w-7xl bg-white/70 backdrop-blur-md shadow-lg 
+        rounded-full md:gap-12  bg-white/70 backdrop-blur-md shadow-lg 
       "
     >
       <Logo className="md:h-[70px] md:w-[70px] h-[60px] w-[60px]" />
