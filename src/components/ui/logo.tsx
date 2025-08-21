@@ -9,7 +9,7 @@ const Logo: React.FC<LogoProps> = ({ className }) => {
   return (
     <Link to="/">
       <div className="flex items-center">
-        <div className="w-10 h-10 bg-[#4B0082] rounded-full flex items-center justify-center text-white font-bold md:text-xl">
+        <div className="text-xl  md:w-10 md:h-10 h-7 w-7 bg-[#4B0082] rounded-full flex items-center justify-center text-white font-bold md:text-xl">
           N
         </div>
         <span

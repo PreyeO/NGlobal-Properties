@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 
 export default function OurStory() {
   return (
-    <section id="our-story" className="py-24 px-6 md:px-12 bg-white">
-      <div className="max-w-7xl mx-auto space-y-20">
+    <section id="our-story" className="md:py-24 py-12 px-6 md:px-12 bg-white">
+      <div className="max-w-7xl mx-auto md:space-y-20 space-y-10">
         {/* Story Block */}
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <motion.div
@@ -18,7 +18,7 @@ export default function OurStory() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
               Our Story
             </h2>
-            <p className="text-gray-700 text-lg leading-relaxed">
+            <p className="text-gray-700 md:text-lg text-base leading-relaxed">
               NGlobal Property is the next-rated real estate company striving to
               bring a balance to the needs of landed properties globally. We
               provide quality and affordable properties to those who choose to
@@ -72,7 +72,7 @@ export default function OurStory() {
               <h3 className="text-xl font-semibold text-gray-900 mb-2">
                 Mission
               </h3>
-              <p className="text-gray-700 text-lg leading-relaxed">
+              <p className="text-gray-700 text-base md:text-lg leading-relaxed">
                 Empower individuals and families with expert guidance,
                 exceptional service, and diverse property options. With
                 integrity, trust, and understanding of client needs, we ensure
@@ -85,7 +85,7 @@ export default function OurStory() {
               <h3 className="text-xl font-semibold text-gray-900 mb-2">
                 Vision
               </h3>
-              <p className="text-gray-700 text-lg leading-relaxed">
+              <p className="text-gray-700 text-base md:text-lg leading-relaxed">
                 To be globally recognized for client satisfaction, innovative
                 solutions, and positive impact on communities, ensuring access
                 to quality housing and land investments.
@@ -96,14 +96,13 @@ export default function OurStory() {
               <h3 className="text-xl font-semibold text-gray-900 mb-2">
                 Motto
               </h3>
-              <p className="text-gray-700 text-lg leading-relaxed">
+              <p className="text-gray-700 text-base md:text-lg leading-relaxed">
                 Thriving on Excellence
               </p>
             </div>
           </motion.div>
         </div>
 
-        {/* Core Values Block - image on right, text on left */}
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Text */}
           <motion.div
@@ -122,7 +121,7 @@ export default function OurStory() {
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   {value.title}
                 </h3>
-                <p className="text-gray-700 text-lg leading-relaxed">
+                <p className="text-gray-700 text-base md:text-lg leading-relaxed">
                   {value.description}
                 </p>
               </div>

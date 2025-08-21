@@ -15,7 +15,7 @@ const NavBar: React.FC = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 gap-12 max-w-7xl flex items-center  px-6 py-3 z-50 bg-white/70 backdrop-blur-md shadow-lg rounded-full">
+    <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 gap-12 max-w-7xl flex items-center  px-6 py-2 md:py-3 z-50 bg-white/70 backdrop-blur-md shadow-lg rounded-full">
       {/* Logo */}
       <Logo />
 

@@ -447,7 +447,7 @@ export const services = [
   {
     title: "Luxury Homes",
     description:
-      "Beautifully crafted houses that give you comfort, style, and a place to truly call home.",
+      "Beautifully crafted houses that give you comfort, style, and a place to call home.",
     icon: "Home",
   },
   {

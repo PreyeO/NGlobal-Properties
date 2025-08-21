@@ -4,7 +4,7 @@ import { stats } from "@/data";
 
 export default function Stats() {
   return (
-    <section className="py-24 px-6 md:px-12 bg-gray-50">
+    <section className="md:py-24 py-12 px-6 md:px-12 bg-gray-50">
       <div className="max-w-7xl mx-auto text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
           Our Achievements
@@ -21,7 +21,7 @@ export default function Stats() {
         labelClassName="text-gray-700 mt-2"
       />
 
-      <div className="py-24">
+      <div className="md:py-24 py-12">
         <CTA
           bgColor="bg-[#4B0082]"
           textColor="text-white"
