@@ -1,5 +1,4 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-
 import LandingPage from "./pages/LandingPage";
 import NavBar from "./components/layouts/NavBar";
 import Footer from "./components/layouts/Footer";
@@ -7,6 +6,7 @@ import AboutUsPage from "./pages/AboutUsPage";
 import PropertiesPage from "./pages/PropertiesPage";
 import ContactPage from "./pages/ContactPage";
 import LogoWatermark from "./components/ui/LogoWatermark";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (

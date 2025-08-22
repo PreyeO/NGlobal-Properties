@@ -1,6 +1,9 @@
 // ContactForm.tsx
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import emailjs from "@emailjs/browser";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -9,9 +12,7 @@ export default function ContactForm() {
     subject: "",
     message: "",
   });
-
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [success, setSuccess] = useState(false);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -23,14 +24,33 @@ export default function ContactForm() {
     e.preventDefault();
     setIsSubmitting(true);
 
+    const emailParams = {
+      to_name: "NGlobal Properties",
+      from_name: formData.name,
+      from_email: formData.email,
+      // subject: formData.subject,
+      message: formData.message,
+    };
+
     try {
-      // Replace this with your EmailJS or API call
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      setSuccess(true);
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        emailParams,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      );
+
+      toast.success("✅ Message sent successfully!", {
+        position: "top-right",
+        autoClose: 4000,
+      });
+
       setFormData({ name: "", email: "", subject: "", message: "" });
-    } catch (error) {
-      console.error("Form submission error:", error);
-      setSuccess(false);
+    } catch {
+      toast.error(" Failed to send message. Please try again later.", {
+        position: "top-right",
+        autoClose: 4000,
+      });
     } finally {
       setIsSubmitting(false);
     }
@@ -78,11 +98,6 @@ export default function ContactForm() {
         rows={6}
         className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#4B0082]"
       />
-      {success && (
-        <p className="text-green-600 font-medium text-center">
-          ✅ Your message has been sent successfully!
-        </p>
-      )}
 
       <div className="text-center">
         <Button
@@ -93,6 +108,8 @@ export default function ContactForm() {
           {isSubmitting ? "Sending..." : "Send Message"}
         </Button>
       </div>
+
+      <ToastContainer />
     </form>
   );
 }
