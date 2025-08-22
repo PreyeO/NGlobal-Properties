@@ -1,6 +1,6 @@
 import type React from "react";
 import { Link } from "react-router-dom";
-import LOGO from "../../../public/images/2.png";
+import LOGO from "../../../public/images/01.png";
 
 interface LogoProps {
   className?: string;

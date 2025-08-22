@@ -56,19 +56,20 @@ export default function Footer() {
             Get the latest properties and updates in our socials.
           </p>
           <div className="flex gap-4 mt-2">
-            <a href="#" className="hover:text-[#4B0082]">
-              <Facebook className="w-5 h-5" />
-            </a>
-            <a href="#" className="hover:text-[#4B0082]">
-              <Twitter className="w-5 h-5" />
-            </a>
             <a
               href="https://www.instagram.com/nglobalproperties?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
               className="hover:text-[#4B0082]"
             >
               <Instagram className="w-5 h-5" />
             </a>
-            <a href="#" className="hover:text-[#4B0082]">
+            <a href="" className="hover:text-[#4B0082]">
+              <Facebook className="w-5 h-5" />
+            </a>
+            <a href="" className="hover:text-[#4B0082]">
+              <Twitter className="w-5 h-5" />
+            </a>
+
+            <a href="" className="hover:text-[#4B0082]">
               <Linkedin className="w-5 h-5" />
             </a>
           </div>

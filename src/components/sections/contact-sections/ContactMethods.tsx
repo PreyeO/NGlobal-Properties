@@ -1,4 +1,3 @@
-// ContactMethods.tsx
 import { Phone, Mail, MessageCircle } from "lucide-react";
 
 export default function ContactMethods() {
@@ -14,14 +13,15 @@ export default function ContactMethods() {
       icon: <MessageCircle className="w-6 h-6 text-white" />,
       label: "WhatsApp",
       value: "+234 808 888 8441",
-      link: "https://wa.me/2348088888441",
+      // 👇 prefilled WhatsApp message
+      link: "https://wa.me/2348088888441?text=Hello%20NGlobal%20Properties!%20I%27m%20interested%20in%20your%20services.",
       bg: "bg-green-500",
     },
     {
       icon: <Mail className="w-6 h-6 text-white" />,
       label: "Email",
-      value: "info@northglobalproperty.com",
-      link: "mailto:info@northglobalproperty.com",
+      value: "info@nglobalproperty.com",
+      link: "mailto:info@nglobalproperty.com",
       bg: "bg-[#4B0082]/80",
     },
   ];

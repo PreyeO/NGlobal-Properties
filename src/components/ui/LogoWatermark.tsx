@@ -1,5 +1,5 @@
 import type React from "react";
-import LOGO from "../../../public/images/4.png";
+import LOGO from "../../../public/images/01.png";
 //  bg-[#4B0082]/10
 const LogoWatermark: React.FC = () => {
   return (

@@ -33,7 +33,7 @@ export default function FAQSection() {
             <AccordionTrigger className="px-6 text-[#4B0082] text-lg">
               {faq.question}
             </AccordionTrigger>
-            <AccordionContent className="px-6 text-gray-700 text-lg">
+            <AccordionContent className="px-6 text-gray-700 md:text-lg text-sm">
               {faq.answer}
             </AccordionContent>
           </AccordionItem>

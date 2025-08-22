@@ -1,3 +1,4 @@
+import { Star } from "lucide-react";
 import Hero from "../Hero";
 
 export default function AboutHero() {
@@ -8,6 +9,7 @@ export default function AboutHero() {
       cta="Explore Our Journey"
       ctaLink="#our-story"
       centerWidth="max-w-4xl"
+      badges={[{ label: "Thriving for Excellence", icon: <Star /> }]}
     />
   );
 }

@@ -38,7 +38,7 @@ export default function CoreValues() {
           Our Core Values
         </h2>
         <p className="text-gray-600 mt-2">
-          The principles that guide our actions and define who we are at North
+          The principles that guide our actions and define who we are at N
           Global Property.
         </p>
       </div>

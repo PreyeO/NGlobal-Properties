@@ -6,8 +6,9 @@ type HeroProps = {
   title: string;
   description: string;
   cta?: string;
-  ctaLink?: string; // can be "#section-id" or route
+  ctaLink?: string;
   centerWidth?: string;
+  badges?: { label: string; icon?: React.ReactNode }[];
 };
 
 export default function Hero({
@@ -16,6 +17,7 @@ export default function Hero({
   cta,
   ctaLink,
   centerWidth = "max-w-5xl",
+  badges = [],
 }: HeroProps) {
   const navigate = useNavigate();
 
@@ -23,23 +25,45 @@ export default function Hero({
     if (!ctaLink) return;
 
     if (ctaLink.startsWith("#")) {
-      // smooth scroll within the same page
       e.preventDefault();
       const el = document.querySelector(ctaLink);
       if (el) {
         el.scrollIntoView({ behavior: "smooth", block: "start" });
       }
     } else {
-      // navigate to a route
       navigate(ctaLink);
     }
   };
 
   return (
-    <section className="relative w-full min-h-screen flex items-center bg-[#4B0082] text-white px-6 md:px-12 overflow-hidden">
+    <section className="relative w-full md:min-h-screen py-24 md:py-0 flex items-center bg-[#4B0082] text-white px-6 md:px-12 overflow-hidden">
+      {/* Subtle background pattern */}
       <div className="absolute top-0 left-0 w-full h-full -z-10 opacity-10 bg-[url('/images/pattern.svg')] bg-repeat" />
 
       <div className={`${centerWidth} mx-auto text-center space-y-8`}>
+        {/* Badges on top */}
+        {badges.length > 0 && (
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="flex-wrap justify-center gap-3 mb-4 hidden md:flex"
+          >
+            {badges.map((badge, i) => (
+              <div
+                key={i}
+                className="flex items-center gap-2 bg-purple-100/90 text-purple-800 px-3 py-1.5 rounded-full text-xs font-medium shadow-sm border border-purple-200"
+              >
+                {badge.icon && (
+                  <span className="text-purple-500">{badge.icon}</span>
+                )}
+                {badge.label}
+              </div>
+            ))}
+          </motion.div>
+        )}
+
+        {/* Title */}
         <motion.h1
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -49,6 +73,7 @@ export default function Hero({
           {title}
         </motion.h1>
 
+        {/* Description */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -58,11 +83,13 @@ export default function Hero({
           {description}
         </motion.p>
 
+        {/* CTA */}
         {cta && (
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
+            className="flex justify-center"
           >
             <PurpleButton
               className="bg-white text-[#4B0082] hover:bg-white/90"
@@ -72,9 +99,6 @@ export default function Hero({
           </motion.div>
         )}
       </div>
-
-      {/* <div className="absolute -bottom-24 -right-24 w-80 h-80 bg-white/10 rounded-full blur-3xl" />
-      <div className="absolute -top-24 -left-24 w-80 h-80 bg-white/10 rounded-full blur-3xl" /> */}
     </section>
   );
 }
