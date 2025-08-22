@@ -40,7 +40,7 @@ export default function ContactForm() {
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       );
 
-      toast.success("✅ Message sent successfully!", {
+      toast.success("Message sent successfully!", {
         position: "top-right",
         autoClose: 4000,
       });
